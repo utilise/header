@@ -1,5 +1,5 @@
 {
-  "name": "header",
+  "name": "utilise.header",
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,6 @@
     "mocha-lcov-reporter": "0.0.2"
   },
   "dependencies": {
-    "has": "git+https://github.com/utilise/has.git"
+    "utilise.has": "*"
   }
 }

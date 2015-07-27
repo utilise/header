@@ -1,4 +1,4 @@
-var has = require('has')
+var has = require('utilise.has')
 
 module.exports = function header(header, value) {
   var getter = arguments.length == 1

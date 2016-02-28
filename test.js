@@ -1,6 +1,6 @@
 var expect = require('chai').expect
   , header = require('./')
-  , o = { body: [], headers: { 'cache': 'no-store' } }
+  , o = { body: [], headers: { 'cache': 'no-store', mysql: { fields: ['foo'] } } }
 
 describe('header', function() {
   
@@ -26,6 +26,14 @@ describe('header', function() {
 
   it('should get a header value', function() {
     expect(header('cache')(o)).to.equal('no-store')
+  })
+
+  it('should get a header value deeply', function() {
+    expect(header('mysql.fields')(o)).to.eql(['foo'])
+  })
+
+  it('should check a header value deeply', function() {
+    expect(header('mysql.fields.0', 'foo')(o)).to.be.ok
   })
 
 })

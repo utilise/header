@@ -16,6 +16,6 @@
     "mocha-lcov-reporter": "0.0.2"
   },
   "dependencies": {
-    "utilise.has": "*"
+    "utilise.key": "*"
   }
 }
